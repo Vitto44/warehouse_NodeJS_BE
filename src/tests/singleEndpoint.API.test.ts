@@ -5,11 +5,11 @@ import mocks from "./mocks.json";
 
 describe("POST /api/order-picking", () => {
   beforeEach(() => {
-    nock("https://dev.aux.boxpi.com")
-      .get("/case-study/products/product-1/positions")
+    nock("URL")
+      .get("/products/product-1/positions")
       .reply(200, mocks.positions);
-    nock("https://dev.aux.boxpi.com")
-      .get("/case-study/products/product-2/positions")
+    nock("URL")
+      .get("/products/product-2/positions")
       .reply(200, mocks.positions2);
   });
 

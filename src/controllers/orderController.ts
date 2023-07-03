@@ -61,7 +61,8 @@ export const getOrderPicking = async (
 
       // Fetch the warehouse positions for the current product
       const response = await axios.get<ProductPosition[]>(
-        `https://dev.aux.boxpi.com/case-study/products/${item.productId}/positions`,
+        // TODO ========> this needs to be changed to the correct url
+        `https://SOME_URL/products/${item.productId}/positions`,
         {
           headers: { "x-api-key": process.env.API_KEY },
         }
